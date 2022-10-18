@@ -16,7 +16,7 @@
       <form
               class="datatable__row datatable__row--add"
               method="POST"
-              action="http://localhost:8080/v1/task/createTask"
+              action="http://localhost:8080/v1/tasks/createTask"
               data-task-add-form
       >
          <fieldset class="datatable__row-section datatable__row-section--input-section">
@@ -33,7 +33,7 @@
             <textarea name="content" placeholder="Insert task content" required minlength="3"></textarea>
          </fieldset>
 
-         <fieldset class="datatable__row-sectio    n datatable__row-section--button-section">
+         <fieldset class="datatable__row-section datatable__row-section--button-section">
             <button type="submit" data-task-add-button class="datatable__button">Add a task</button>
          </fieldset>
       </form>
@@ -84,6 +84,8 @@
       </div>
    </form>
 </div>
+
+
 
 <script src="jquery-3.6.1.min.js"></script>
 <script src="script.js"></script>

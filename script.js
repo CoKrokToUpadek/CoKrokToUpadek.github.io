@@ -1,9 +1,12 @@
 
-$(document).ready(function() {
+//var apiRoot = 'https://kodilla-tasks-nj.herokuapp.com/v1/tasks'
+//const apiRoot = 'http://localhost:8080/v1/tasks';
+//const trelloApiRoot = 'http://localhost:8080/v1/trello';
+//const trelloApiRoot = 'https://kodilla-tasks-nj.herokuapp.com/v1/trello';
 
+
+$(document).ready(function() {
     var apiRoot = 'https://kodilla-tasks-nj.herokuapp.com/v1/tasks'
-    //const apiRoot = 'http://localhost:8080/v1/tasks';
-    //const trelloApiRoot = 'http://localhost:8080/v1/trello';
     const trelloApiRoot = 'https://kodilla-tasks-nj.herokuapp.com/v1/trello';
     const datatableRowTemplate = $('[data-datatable-row-template]').children()[0];
     const $tasksContainer = $('[data-tasks-container]');
@@ -113,9 +116,6 @@ $(document).ready(function() {
         var parentEl = $(this).parents('[data-task-id]');
         var taskId = parentEl.attr('data-task-id');
         var requestUrl = apiRoot;
-
-        console.log(parentEl)//123
-        console.log(taskId)
 
         $.ajax({
             url: requestUrl + '/' + taskId,
