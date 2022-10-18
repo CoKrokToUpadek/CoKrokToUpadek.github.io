@@ -114,6 +114,9 @@ $(document).ready(function() {
         var taskId = parentEl.attr('data-task-id');
         var requestUrl = apiRoot;
 
+        console.log(parentEl)//123
+        console.log(taskId)
+
         $.ajax({
             url: requestUrl + '/' + taskId,
             method: 'DELETE',
